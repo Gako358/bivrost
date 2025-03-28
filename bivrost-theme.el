@@ -32,28 +32,28 @@
 (eval-and-compile
   (defconst bivrost-theme-colors-alist
     '(;; Basic
-      (bg-main . "#272727")
-      (fg-main . "#E0E0E0")
-      (bg-active . "#f2f3f5")
-      (bg-inactive . "#e3e5e8")
-      (black . "#000000")
-      (black-alt . "#171A1C")
-      (gray . "#CFD8DC")
-      (gray-light . "#ECEFF1")
-      (gray-silver . "#B0BEC5")
-      (gray-dark . "#585c60")
-      (purple . "#5c3e99")
-      (blue . "#23457f")
-      (blue-alt . "#0071bc")
-      (blue-light . "#d9edf7")
-      (green . "#16524F")
-      (green-mint . "#ddffdd")
-      (green-light . "#3c763d")
-      (green-faint . "#537469")
-      (yellow-dark . "#54433a")
-      (red . "#9E0000")
-      (red-faint . "#ffb7b6")
-      (orange . "#d47500"))))
+      (bg-main . "#272727")        ;; Primary background color - deep charcoal
+      (fg-main . "#cdcecf")        ;; Primary foreground color - soft white with slight blue tint
+      (bg-active . "#29394f")      ;; Active window/element background - deep navy blue
+      (bg-inactive . "#212e3f")    ;; Inactive window/element background - muted slate blue
+      (black . "#393b44")          ;; True black alternative - smoky charcoal
+      (black-alt . "#131a24")      ;; Secondary black - inkwell blue-black
+      (gray . "#71839b")           ;; Primary gray - steel blue-gray
+      (gray-light . "#aeafb0")     ;; Light gray - cloudy silver
+      (gray-silver . "#738091")    ;; Silver gray - muted slate
+      (gray-dark . "#39506d")      ;; Dark gray - deep slate blue
+      (purple . "#9d79d6")         ;; Purple - lavender violet
+      (blue . "#719cd6")           ;; Primary blue - sky cerulean
+      (blue-alt . "#63cdcf")       ;; Alternative blue - turquoise
+      (blue-light . "#2b3b51")     ;; Light blue - midnight navy
+      (green . "#81b29a")          ;; Primary green - sage
+      (green-mint . "#a3ccb5")     ;; Mint green - soft pastels
+      (green-light . "#94c4af")    ;; Light green - pale jade
+      (green-faint . "#5a7d6d")    ;; Faint green - forest mist
+      (yellow-dark . "#b59d61")    ;; Dark yellow - antique gold
+      (red . "#c94f6d")            ;; Primary red - cranberry
+      (red-faint . "#e0a3b3")      ;; Faint red - dusty rose
+      (orange . "#f4a261"))))      ;; Orange - warm peach
 
 (defmacro bivrost-with-color-variables (&rest body)
   (declare (indent 0))
