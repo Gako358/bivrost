@@ -1,7 +1,3 @@
-*** Introduction
-
-This org file explains the setup and configuration of the Bivrost theme. It includes details about the color constants, how to use =use-package= for installation, and instructions for setting up the theme.
-
 *** Overview
 
 + The Bivrost theme provides a clean, north-bluish appearance.

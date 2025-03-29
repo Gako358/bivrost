@@ -42,7 +42,7 @@
       (bivrost6 "#E5E9F0")
       (bivrost7 "#ECEFF4")
       (bivrost8 "#8FBCBB")
-      (bivrost9 "#88C0D0")
+      (bivrost9 "#719cd6")
       (bivrost10 "#81A1C1")
       (bivrost11 "#5E81AC")
       (bivrost12 "#BF616A")
@@ -378,6 +378,9 @@
    ;; > Anzu
    `(anzu-mode-line ((,class (:foreground, bivrost9))))
    `(anzu-mode-line-no-match ((,class (:foreground, bivrost12))))
+
+   ;; Corfu
+   `(corfu-backgrund ((,class (:background,bivrost2))))
 
    ;; > diff-hl
    `(diff-hl-change ((,class (:background ,bivrost14))))
