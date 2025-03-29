@@ -1,0 +1,86 @@
+*** Introduction
+
+This org file explains the setup and configuration of the Bivrost theme. It includes details about the color constants, how to use =use-package= for installation, and instructions for setting up the theme.
+
+*** Overview
+
++ The Bivrost theme provides a clean, north-bluish appearance.
++ It defines several color constants such as =bivrost0=, =bivrost1=, etc.
++ The region highlight is now fixed to the _frost_ style with predetermined colors.
++ We also demonstrate how to load the theme using =use-package=.
+
+*** Color Configuration and Explanation
+
++ The theme assigns colors directly via hex values.
++ For example:
+  1. =bivrost0= is set to =#242424=.
+  2. =bivrost4= is set to =#4C566A=.
++ The comment face is defined as =bivrost-comment= which is set to =#616e88=.
++ The region highlight is hard-coded to the _frost_ style:
+  + The foreground is =#2E3440=.
+  + The background is =#88C0D0=.
+
+*** Theme Code Example
+
+Below is an example of the updated theme code that assumes true color is always available and uses the _frost_ region highlight option.
+
+#+BEGIN_SRC emacs-lisp
+  (let ((class '((class color) (min-colors 89)))
+        (bivrost-region-highlight-foreground "#2E3440")
+        (bivrost-region-highlight-background "#88C0D0")
+        (bivrost0 "#242424")
+        (bivrost1 "#3B4252")
+        (bivrost2 "#303035")
+        (bivrost3 "#434C5E")
+        (bivrost4 "#4C566A")
+        (bivrost5 "#b2b2b2")
+        (bivrost6 "#E5E9F0")
+        (bivrost7 "#ECEFF4")
+        (bivrost8 "#8FBCBB")
+        (bivrost9 "#88C0D0")
+        (bivrost10 "#81A1C1")
+        (bivrost11 "#5E81AC")
+        (bivrost12 "#BF616A")
+        (bivrost13 "#D08770")
+        (bivrost14 "#EBCB8B")
+        (bivrost15 "#A3BE8C")
+        (bivrost16 "#B48EAD")
+        (bivrost-annotation "#D08770")
+        (bivrost-attribute "#8FBCBB")
+        (bivrost-class "#8FBCBB")
+        (bivrost-comment "#616e88")
+        (bivrost-escape "#D08770")
+        (bivrost-method "#88C0D0")
+        (bivrost-keyword "#81A1C1")
+        (bivrost-numeric "#B48EAD")
+        (bivrost-operator "#81A1C1")
+        (bivrost-preprocessor "#5E81AC")
+        (bivrost-punctuation "#D8DEE9")
+        (bivrost-regexp "#EBCB8B")
+        (bivrost-string "#A3BE8C")
+        (bivrost-tag "#81A1C1")
+        (bivrost-variable "#D8DEE9"))
+    )
+#+END_SRC
+
+*** Using use-package for Theme Setup
+
++ The =use-package= macro helps manage and load the theme with minimal configuration.
++ Ensure that the theme file is in your =load-path= or package repository.
++ Here is an example configuration if you have the theme installed locally.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package bivrost-theme
+    :ensure nil    ; Set to nil for local installation; change if installing from a package repository
+    :init
+    (add-to-list 'load-path "~/.emacs.d/themes/bivrost/")
+    :config
+    (load-theme 'bivrost t))
+#+END_SRC
+
+*** Summary
+
++ The Bivrost theme uses a set of fixed color values to deliver a unique, arctic appearance.
++ The obsolete customization for region highlight has been removed and is now fixed to the _frost_ style.
++ Using =use-package= simplifies the installation and loading of the theme.
++ Modify the color constants in the code block if you desire a personalized tweak.
