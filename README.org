@@ -5,10 +5,11 @@
 + The region highlight is now fixed to the _frost_ style with predetermined colors.
 + We also demonstrate how to load the theme using =use-package=.
   
-#+BEGIN_QUOTE
-![Dashboard](./images/dashboard.png)
-![Rust](./images/rust.png)
-#+END_QUOTE
+#+CAPTION: Dashboard Screenshot
+[[./images/dashboard.png]]
+
+#+CAPTION: Rust Code Example
+[[./images/rust.png]]
 
 *** Color Configuration and Explanation
 
