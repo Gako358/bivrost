@@ -4,6 +4,11 @@
 + It defines several color constants such as =bivrost0=, =bivrost1=, etc.
 + The region highlight is now fixed to the _frost_ style with predetermined colors.
 + We also demonstrate how to load the theme using =use-package=.
+  
+#+BEGIN_QUOTE
+![Dashboard](./images/dashboard.png)
+![Rust](./images/rust.png)
+#+END_QUOTE
 
 *** Color Configuration and Explanation
 
