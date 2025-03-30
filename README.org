@@ -3,8 +3,10 @@
 + The Bivrost theme provides a clean, north-bluish appearance.
 + It defines several color constants such as =bivrost0=, =bivrost1=, etc.
 + The region highlight is now fixed to the _frost_ style with predetermined colors.
-+ We also demonstrate how to load the theme using =use-package=.
-  
++ This also demonstrate how to load the theme using =use-package=.
+
+*** Preview
+
 #+CAPTION: Dashboard Screenshot
 [[./images/dashboard.png]]
 
