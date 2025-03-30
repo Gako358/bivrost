@@ -33,23 +33,23 @@
 (let ((class '((class color) (min-colors 89)))
       (bivrost-region-highlight-foreground "#2E3440")
       (bivrost-region-highlight-background "#88C0D0")
-      (bivrost0 "#242424")
-      (bivrost1 "#3B4252")
-      (bivrost2 "#303035")
-      (bivrost3 "#434C5E")
-      (bivrost4 "#4C566A")
-      (bivrost5 "#b2b2b2")
-      (bivrost6 "#E5E9F0")
-      (bivrost7 "#ECEFF4")
-      (bivrost8 "#8FBCBB")
-      (bivrost9 "#719cd6")
-      (bivrost10 "#81A1C1")
-      (bivrost11 "#5E81AC")
-      (bivrost12 "#BF616A")
-      (bivrost13 "#D08770")
-      (bivrost14 "#EBCB8B")
-      (bivrost15 "#A3BE8C")
-      (bivrost16 "#B48EAD")
+      (bivrost0 "#242424")  ; Base dark background color
+      (bivrost1 "#3B4252")  ; Dark bluish color
+      (bivrost2 "#303035")  ; Alternate dark background, subtle contrast from bivrost0
+      (bivrost3 "#434C5E")  ; Lighter blue color, suble contrast from bivrost1
+      (bivrost4 "#4C566A")  ; Grayish blue color, subtle contrast from bivrost3
+      (bivrost5 "#b2b2b2")  ; Base forground, warm white
+      (bivrost6 "#E5E9F0")  ; White bluish color
+      (bivrost7 "#ECEFF4")  ; Grayish white color, subtle contrast from bivrost6
+      (bivrost8 "#8FBCBB")  ; Cyan color
+      (bivrost9 "#719cd6")  ; Blue color
+      (bivrost10 "#81A1C1") ; Light blue color, subtle contrast from bivrost9
+      (bivrost11 "#5E81AC") ; Gray blue color, subtle contrast from bivrost10
+      (bivrost12 "#BF616A") ; Red color
+      (bivrost13 "#D08770") ; Light orange color, subtle contrast from bivrost12
+      (bivrost14 "#EBCB8B") ; Yellow color
+      (bivrost15 "#A3BE8C") ; Green color
+      (bivrost16 "#B48EAD") ; Lime green color, subtle contrast from bivrost15
       (bivrost-annotation "#D08770")
       (bivrost-attribute "#8FBCBB")
       (bivrost-class "#8FBCBB")
@@ -379,18 +379,63 @@
    `(anzu-mode-line ((,class (:foreground, bivrost9))))
    `(anzu-mode-line-no-match ((,class (:foreground, bivrost12))))
 
-   ;; Corfu
-   `(corfu-backgrund ((,class (:background,bivrost2))))
+   ;; > Corfu
+   `(corfu-default ((,class (:background,bivrost2))))
 
    ;; > diff-hl
    `(diff-hl-change ((,class (:background ,bivrost14))))
    `(diff-hl-insert ((,class (:background ,bivrost15))))
    `(diff-hl-delete ((,class (:background ,bivrost12))))
 
+   ;; > Eshell faces
+   `(eshell-prompt ((,class (:foreground ,bivrost9 :weight bold))))
+   `(eshell-ls-archive ((,class (:foreground ,bivrost13))))       ; Archives (.zip, .tar, etc.)
+   `(eshell-ls-backup ((,class (:foreground ,bivrost4 :slant italic)))) ; Backup files (~, .bak, etc.)
+   `(eshell-ls-clutter ((,class (:foreground ,bivrost4 :slant italic)))) ; Clutter files (.DS_Store, etc.)
+   `(eshell-ls-directory ((,class (:foreground ,bivrost9 :weight bold)))) ; Directories
+   `(eshell-ls-executable ((,class (:foreground ,bivrost15 :weight bold)))) ; Executable files
+   `(eshell-ls-missing ((,class (:foreground ,bivrost12 :strike-through t)))) ; Missing files
+   `(eshell-ls-product ((,class (:foreground ,bivrost14))))       ; Product files
+   `(eshell-ls-readonly ((,class (:foreground ,bivrost14 :background ,bivrost1)))) ; Read-only files
+   `(eshell-ls-special ((,class (:foreground ,bivrost16 :weight bold)))) ; Special files (devices, sockets, etc.)
+   `(eshell-ls-symlink ((,class (:foreground ,bivrost8 :slant italic)))) ; Symbolic links
+   `(eshell-ls-unreadable ((,class (:foreground ,bivrost4 :background ,bivrost1)))) ; Unreadable files
+
    ;; > Evil
    `(evil-ex-info ((,class (:foreground ,bivrost9))))
    `(evil-ex-substitute-replacement ((,class (:foreground ,bivrost10))))
    `(evil-ex-substitute-matches ((,class (:inherit isearch))))
+
+   ;; > Eat
+   ;; Standard ANSI colors
+   `(eat-term-color-0 ((,class (:foreground ,bivrost0 :background ,bivrost0))))  ; Black
+   `(eat-term-color-1 ((,class (:foreground ,bivrost12 :background ,bivrost12)))) ; Red
+   `(eat-term-color-2 ((,class (:foreground ,bivrost15 :background ,bivrost15)))) ; Green
+   `(eat-term-color-3 ((,class (:foreground ,bivrost14 :background ,bivrost14)))) ; Yellow
+   `(eat-term-color-4 ((,class (:foreground ,bivrost9 :background ,bivrost9))))   ; Blue
+   `(eat-term-color-5 ((,class (:foreground ,bivrost16 :background ,bivrost16)))) ; Magenta
+   `(eat-term-color-6 ((,class (:foreground ,bivrost8 :background ,bivrost8))))   ; Cyan
+   `(eat-term-color-7 ((,class (:foreground ,bivrost5 :background ,bivrost5))))   ; White
+
+   ;; Bright variants
+   `(eat-term-color-8 ((,class (:foreground ,bivrost2 :background ,bivrost2))))   ; Bright Black
+   `(eat-term-color-9 ((,class (:foreground ,bivrost13 :background ,bivrost13)))) ; Bright Red
+   `(eat-term-color-10 ((,class (:foreground ,bivrost15 :background ,bivrost15)))) ; Bright Green
+   `(eat-term-color-11 ((,class (:foreground ,bivrost14 :background ,bivrost14)))) ; Bright Yellow
+   `(eat-term-color-12 ((,class (:foreground ,bivrost10 :background ,bivrost10)))) ; Bright Blue
+   `(eat-term-color-13 ((,class (:foreground ,bivrost16 :background ,bivrost16)))) ; Bright Magenta
+   `(eat-term-color-14 ((,class (:foreground ,bivrost8 :background ,bivrost8))))   ; Bright Cyan
+   `(eat-term-color-15 ((,class (:foreground ,bivrost7 :background ,bivrost7))))   ; Bright White
+
+   ;; Terminal attributes
+   `(eat-term-bold ((,class (:weight bold))))
+   `(eat-term-italic ((,class (:slant italic))))
+   `(eat-term-faint ((,class (:weight light))))
+
+   ;; Shell prompt annotations
+   `(eat-shell-prompt-annotation-failure ((,class (:foreground ,bivrost12))))  ; Red for failure
+   `(eat-shell-prompt-annotation-success ((,class (:foreground ,bivrost15))))  ; Green for success
+   `(eat-shell-prompt-annotation-running ((,class (:foreground ,bivrost14))))  ; Yellow for running
 
    ;; > Flycheck
    `(flycheck-error ((,class (:underline (:style wave :color ,bivrost12)))))
