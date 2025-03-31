@@ -33,7 +33,7 @@
 (let ((class '((class color) (min-colors 89)))
       (bivrost-region-highlight-foreground "#2E3440")
       (bivrost-region-highlight-background "#88C0D0")
-      (bivrost0 "#242424")  ; Base dark background color
+      (bivrost0 "#1a1a1a")  ; Base dark background color
       (bivrost1 "#3B4252")  ; Dark bluish color
       (bivrost2 "#303035")  ; Alternate dark background, subtle contrast from bivrost0
       (bivrost3 "#434C5E")  ; Lighter blue color, suble contrast from bivrost1
