@@ -387,25 +387,6 @@
    `(diff-hl-insert ((,class (:background ,bivrost15))))
    `(diff-hl-delete ((,class (:background ,bivrost12))))
 
-   ;; > Eshell faces
-   `(eshell-prompt ((,class (:foreground ,bivrost9 :weight bold))))
-   `(eshell-ls-archive ((,class (:foreground ,bivrost13))))       ; Archives (.zip, .tar, etc.)
-   `(eshell-ls-backup ((,class (:foreground ,bivrost4 :slant italic)))) ; Backup files (~, .bak, etc.)
-   `(eshell-ls-clutter ((,class (:foreground ,bivrost4 :slant italic)))) ; Clutter files (.DS_Store, etc.)
-   `(eshell-ls-directory ((,class (:foreground ,bivrost9 :weight bold)))) ; Directories
-   `(eshell-ls-executable ((,class (:foreground ,bivrost15 :weight bold)))) ; Executable files
-   `(eshell-ls-missing ((,class (:foreground ,bivrost12 :strike-through t)))) ; Missing files
-   `(eshell-ls-product ((,class (:foreground ,bivrost14))))       ; Product files
-   `(eshell-ls-readonly ((,class (:foreground ,bivrost14 :background ,bivrost1)))) ; Read-only files
-   `(eshell-ls-special ((,class (:foreground ,bivrost16 :weight bold)))) ; Special files (devices, sockets, etc.)
-   `(eshell-ls-symlink ((,class (:foreground ,bivrost8 :slant italic)))) ; Symbolic links
-   `(eshell-ls-unreadable ((,class (:foreground ,bivrost4 :background ,bivrost1)))) ; Unreadable files
-
-   ;; > Evil
-   `(evil-ex-info ((,class (:foreground ,bivrost9))))
-   `(evil-ex-substitute-replacement ((,class (:foreground ,bivrost10))))
-   `(evil-ex-substitute-matches ((,class (:inherit isearch))))
-
    ;; > Eat
    ;; Standard ANSI colors
    `(eat-term-color-0 ((,class (:foreground ,bivrost0 :background ,bivrost0))))  ; Black
@@ -432,6 +413,34 @@
    `(eat-term-italic ((,class (:slant italic))))
    `(eat-term-faint ((,class (:weight light))))
 
+   ;; > Eglot
+   `(eglot-diagnostic-tag-deprecated-face ((,class (:strike-through t :foreground ,bivrost13))))
+   `(eglot-diagnostic-tag-unnecessary-face ((,class (:foreground ,bivrost4 :slant italic))))
+   `(eglot-highlight-symbol-face ((,class (:background ,bivrost2 :weight bold))))
+   `(eglot-inlay-hint-face ((,class (:height 0.9 :foreground ,bivrost4 :slant italic))))
+   `(eglot-mode-line ((,class (:foreground ,bivrost9 :weight bold))))
+   `(eglot-parameter-hint-face ((,class (:height 0.9 :foreground ,bivrost10 :slant italic))))
+   `(eglot-type-hint-face ((,class (:height 0.9 :foreground ,bivrost8 :slant italic))))
+
+   ;; > Eshell faces
+   `(eshell-prompt ((,class (:foreground ,bivrost9 :weight bold))))
+   `(eshell-ls-archive ((,class (:foreground ,bivrost13))))       ; Archives (.zip, .tar, etc.)
+   `(eshell-ls-backup ((,class (:foreground ,bivrost4 :slant italic)))) ; Backup files (~, .bak, etc.)
+   `(eshell-ls-clutter ((,class (:foreground ,bivrost4 :slant italic)))) ; Clutter files (.DS_Store, etc.)
+   `(eshell-ls-directory ((,class (:foreground ,bivrost9 :weight bold)))) ; Directories
+   `(eshell-ls-executable ((,class (:foreground ,bivrost15 :weight bold)))) ; Executable files
+   `(eshell-ls-missing ((,class (:foreground ,bivrost12 :strike-through t)))) ; Missing files
+   `(eshell-ls-product ((,class (:foreground ,bivrost14))))       ; Product files
+   `(eshell-ls-readonly ((,class (:foreground ,bivrost14 :background ,bivrost1)))) ; Read-only files
+   `(eshell-ls-special ((,class (:foreground ,bivrost16 :weight bold)))) ; Special files (devices, sockets, etc.)
+   `(eshell-ls-symlink ((,class (:foreground ,bivrost8 :slant italic)))) ; Symbolic links
+   `(eshell-ls-unreadable ((,class (:foreground ,bivrost4 :background ,bivrost1)))) ; Unreadable files
+
+   ;; > Evil
+   `(evil-ex-info ((,class (:foreground ,bivrost9))))
+   `(evil-ex-substitute-replacement ((,class (:foreground ,bivrost10))))
+   `(evil-ex-substitute-matches ((,class (:inherit isearch))))
+
    ;; Shell prompt annotations
    `(eat-shell-prompt-annotation-failure ((,class (:foreground ,bivrost12))))  ; Red for failure
    `(eat-shell-prompt-annotation-success ((,class (:foreground ,bivrost15))))  ; Green for success
@@ -444,6 +453,20 @@
    `(flycheck-fringe-warning ((,class (:foreground ,bivrost14 :weight bold))))
    `(flycheck-info ((,class (:underline (:style wave :color ,bivrost9)))))
    `(flycheck-warning ((,class (:underline (:style wave :color ,bivrost14)))))
+
+   ;; > Flymake
+   `(flymake-error ((,class (:underline (:style wave :color ,bivrost12)))))
+   `(flymake-warning ((,class (:underline (:style wave :color ,bivrost14)))))
+   `(flymake-note ((,class (:underline (:style wave :color ,bivrost15)))))
+   `(flymake-error-echo ((,class (:foreground ,bivrost12 :weight bold))))
+   `(flymake-warning-echo ((,class (:foreground ,bivrost14 :weight bold))))
+   `(flymake-note-echo ((,class (:foreground ,bivrost15 :weight bold))))
+   `(flymake-error-echo-at-eol ((,class (:foreground ,bivrost12 :background ,bivrost2 :weight bold))))
+   `(flymake-warning-echo-at-eol ((,class (:foreground ,bivrost14 :background ,bivrost2 :weight bold))))
+   `(flymake-note-echo-at-eol ((,class (:foreground ,bivrost15 :background ,bivrost2 :weight bold))))
+
+   `(flymake-end-of-line-diagnostics-face ((,class (:background ,bivrost2 :foreground ,bivrost5))))
+   `(flymake-eol-information-face ((,class (:background ,bivrost2 :foreground ,bivrost10))))
 
    ;; > Git Gutter
    `(git-gutter:modified ((,class (:foreground ,bivrost14))))
@@ -481,6 +504,15 @@
    `(magit-process-ok ((,class (:foreground ,bivrost15 :weight bold))))
    `(magit-section-heading ((,class (:foreground ,bivrost8 :weight bold))))
    `(magit-section-highlight ((,class (:background ,bivrost3))))
+
+   ;; > MU4E
+   `(mu4e-header-marks-face ((,class (:foreground ,bivrost10))))
+   `(mu4e-title-face ((,class (:foreground ,bivrost9))))
+   `(mu4e-header-key-face ((,class (:foreground ,bivrost9))))
+   `(mu4e-highlight-face ((,class (:highlight))))
+   `(mu4e-flagged-face ((,class (:foreground ,bivrost14))))
+   `(mu4e-unread-face ((,class (:foreground ,bivrost14 :weight bold))))
+   `(mu4e-link-face ((,class (:underline t))))
 
    ;; > Org
    `(org-level-1 ((,class (:foreground ,bivrost8 :weight extra-bold))))
@@ -554,9 +586,10 @@
 
    ;; Spaceline
    `(spaceline-evil-normal ((,class (:background ,bivrost9))))
-   `(spaceline-evil-insert ((,class (:foreground ,bivrost0 :background ,bivrost5))))
+   `(spaceline-evil-insert ((,class (:foreground ,bivrost5 :background ,bivrost15))))
    `(spaceline-evil-visual ((,class (:foreground ,bivrost0 :background ,bivrost8))))
-   `(spaceline-evil-replace ((,class (:foreground ,bivrost0 :background ,bivrost10))))
+   `(spaceline-evil-replace ((,class (:foreground ,bivrost5 :background ,bivrost10))))
+   `(spaceline-evil-unmodified ((,class (:foreground ,bivrost5 :background ,bivrost9))))
    `(spaceline-highlight-face ((,class (:background ,bivrost2))))))
 
 ;;;###autoload
