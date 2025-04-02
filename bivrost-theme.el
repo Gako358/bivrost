@@ -38,7 +38,7 @@
       (bivrost2 "#303035")  ; Alternate dark background, subtle contrast from bivrost0
       (bivrost3 "#434C5E")  ; Lighter blue color, suble contrast from bivrost1
       (bivrost4 "#4C566A")  ; Grayish blue color, subtle contrast from bivrost3
-      (bivrost5 "#dfdfe0")  ; Base forground, white
+      (bivrost5 "#b2b2b2")  ; Base forground, warm white
       (bivrost6 "#E5E9F0")  ; White bluish color
       (bivrost7 "#ECEFF4")  ; Grayish white color, subtle contrast from bivrost6
       (bivrost8 "#8FBCBB")  ; Cyan color
